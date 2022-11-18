@@ -1,0 +1,24 @@
+package com.javabykiran.controller;
+
+import java.util.ArrayList;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+public class Categorycontorllr {
+	@RestController 
+	public class Productcontorllr {
+		@PostMapping("showallcategories/{distncecoverd}")
+		public ArrayList<Category> fetchAllCategories(){
+	    	ArrayList<Category> b1= new ArrayList<>();
+	    	Category product  = new Category("Lux" , 123 , "4562");
+	    	Category product2 = new Category("Sports", 415, "7895");
+	        
+	        b1.add(product);
+	        b1.add(product2);
+	        
+	        return b1;
+		}
+	}
+
+}

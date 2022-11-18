@@ -1,0 +1,23 @@
+package com.javabykiran.controller;
+
+import java.util.ArrayList;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ProductController {
+    @GetMapping("showallproducts")
+    public ArrayList<Product> fetchAllProducts(){
+    	ArrayList<Product> b1= new ArrayList<>();
+    	Product product  = new Product(1 , "Car" , "1245");
+        Product product2 = new Product(2 , "Cycle", "1200");
+        
+        b1.add(product);
+        b1.add(product2);
+        
+        return b1;
+    	
+    	
+    }
+}

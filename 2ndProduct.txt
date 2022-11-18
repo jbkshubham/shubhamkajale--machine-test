@@ -1,0 +1,22 @@
+package com.javabykiran.controller;
+
+import java.util.ArrayList;
+
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController 
+public class Productcontorllr {
+	@PostMapping("showallproducts/{pname}")
+	public ArrayList<Product> fetchAllProducts(){
+    	ArrayList<Product> b1= new ArrayList<>();
+    	Product product  = new Product(1 , "WashingMachine" , "1245");
+        Product product2 = new Product(2 , "Truck", "1200");
+        
+        b1.add(product);
+        b1.add(product2);
+        
+        return b1;
+	}
+}
